@@ -5,7 +5,7 @@ Referring to the slides of [Swapnil Agarwal](https://gitpitch.com/swapagarwal/ne
 The code sample for following can be found.
 
 1. [Intersection Observer API](./intersection-observer-api.html)
-2. Credential Management API
+2. [Credential Management API](./credential-management-api.html)
 3. Network Information API
 4. Web Share API
 5. Device Memory API
