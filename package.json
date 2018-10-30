@@ -1,0 +1,25 @@
+{
+  "name": "browser-apis",
+  "version": "1.0.0",
+  "description": "Browser APIs - trying out",
+  "scripts": {
+    "start": "http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vkallore/browser-apis.git"
+  },
+  "keywords": [
+    "browser api",
+    "intersection observer api"
+  ],
+  "author": "Vaishak Kallore",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vkallore/browser-apis/issues"
+  },
+  "homepage": "https://github.com/vkallore/browser-apis#readme",
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  }
+}
