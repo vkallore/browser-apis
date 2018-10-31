@@ -64,7 +64,20 @@ function handleIntersect(entries, observer) {
     if (toFixed > 0) {
       images.forEach(function(img) {
         var dataSrc = img.getAttribute('data-src')
-        if (img.src !== dataSrc) {
+        if (
+          img.src !== dataSrc ||
+          (typeof conType !== 'undefined' &&
+            typeof newConType !== 'undefined' &&
+            conType !== newConType &&
+            ['2g', 'cellular'].indexOf(newConType) === -1)
+        ) {
+          /* Just an example to handle image src on low speed, without service worker */
+          if (
+            typeof conType !== 'undefined' &&
+            ['2g', 'cellular'].indexOf(conType) !== -1
+          ) {
+            dataSrc += '&blur'
+          }
           img.src = dataSrc
         }
       })
