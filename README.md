@@ -9,4 +9,4 @@ The code sample for following can be found.
 3. [Network Information API](./network-information-api.html)
 4. [Web Share API](./web-share-api.html)
 5. [Device Memory API](./device-memory-api.html)
-6. Payment Request API
+6. [Payment Request API](./payment-request-api.html)
