@@ -7,6 +7,6 @@ The code sample for following can be found.
 1. [Intersection Observer API](./intersection-observer-api.html)
 2. [Credential Management API](./credential-management-api.html)
 3. [Network Information API](./network-information-api.html)
-4. Web Share API
+4. [Web Share API](./web-share-api.html)
 5. Device Memory API
 6. Payment Request API
