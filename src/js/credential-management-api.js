@@ -16,7 +16,7 @@ if (hasCredentials) {
           var form = new FormData()
 
           // Append CSRF Token
-          var csrf_token = document.querySelector('csrf_token').value
+          var csrf_token = document.getElementsByName('csrf_token').value
           form.append('csrf_token', csrf_token)
 
           // You can append additional credential data to `.additionalData`
@@ -25,12 +25,14 @@ if (hasCredentials) {
           // `POST` the credential object as `credentials`.
           // id, password and the additional data will be encoded and
           // sent to the url as the HTTP body.
+          // validate
+          console.log('Password re-validate with API request')
           fetch('YOUR_LOGIN_URL', {
             // Make sure the URL is HTTPS
             method: 'POST', // Use POST
             credentials: cred // Add the password credential object
           }).then(function() {
-            // continuation
+            // Password check status, throw error if login failed
           })
         } else if (cred.type == 'federated') {
           // `provider` contains the identity provider string
@@ -69,9 +71,10 @@ document.querySelector('#loginForm').addEventListener('submit', function(e) {
   var form = document.querySelector('#loginForm')
   if (hasCredentials) {
     var cred = new PasswordCredential(form)
-    // Store it
+    // Store/update it
     navigator.credentials.store(cred).then(function() {
       // continuation, proceed with login
+      console.log('Your credential is being stored/updated')
     })
   } else {
     console.log('Credentials not supported, proceeding with normal login')
@@ -92,10 +95,18 @@ document
         provider: 'https://accounts.google.com', // A string that represents the identity provider
         iconURL: '' // Optional user avatar image url
       })
-      console.log(cred)
       // Store it
       navigator.credentials.store(cred).then(function() {
         // continuation
       })
     }
   })
+
+function init() {
+  gapi.load('auth2', function() {
+    gapi.auth2.init({
+      clientId: 'YOUR_CLIENT_ID.apps.googleusercontent.com',
+      scope: 'fetch_basic_profile'
+    })
+  })
+}

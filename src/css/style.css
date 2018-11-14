@@ -1,0 +1,91 @@
+body {
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.25em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: initial;
+  clear: both;
+}
+a {
+  color: #006699;
+  text-decoration: none;
+}
+a:hover {
+  color: #004499;
+  text-decoration: underline;
+}
+pre {
+  display: inline;
+  font-style: italic;
+  background: #dedee0;
+  color: #0071ff;
+  border-radius: 2px;
+  border: 1px #bbbbbb solid;
+  padding: 0.05rem 0.2rem;
+}
+ul li,
+ol li {
+  line-height: 2rem;
+}
+li.text-content {
+  line-height: 1.5rem;
+}
+.text-center {
+  text-align: center;
+}
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.container > div {
+  display: block;
+  clear: both;
+  /* margin-top: 1rem; */
+}
+
+/* Observer & Network information pages */
+.observer {
+  position: relative;
+  height: auto;
+  overflow: hidden;
+}
+.observer p {
+  text-align: justify;
+}
+.observer img {
+  float: left;
+  padding: 10px;
+}
+#observerIntRatio {
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  background-color: #fff;
+  font-size: 8rem;
+}
+form {
+  width: 100%;
+  margin: 0 auto;
+}
+.input-group {
+  margin: 0.5rem;
+}
+.input-group input {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .container {
+    margin-top: 4rem;
+  }
+  form {
+    max-width: 50%;
+  }
+}
