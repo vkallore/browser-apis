@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Intersection Observer API</title>
+    <title>The Intersection Observer API</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
@@ -12,7 +12,8 @@
 
   <body>
     <div class="container">
-      <h1>Intersection Observer API</h1>
+      <a href="./index.html" id="backToHome" class="btn">Back to Home</a>
+      <h1>The Intersection Observer API</h1>
       <p>
         The Intersection Observer API provides a way to asynchronously observe
         changes in the intersection of a target element with an ancestor element
@@ -49,14 +50,18 @@
       </div>
       <h3>Example of Intersection Observer API</h3>
       <div class="observer">
+        To see how it actually works, load this page from mobile screen or
+        resize your browser window to a lower resolution.
         <span id="observerIntRatio"></span>
-        <div>
+        <div class="image-holder">
           <img
             data-src="https://picsum.photos/200/300/?image=345"
             alt="random"
             width="200"
             height="300"
           />
+        </div>
+        <div class="image-holder">
           <img
             data-src="https://picsum.photos/200/300/?random&"
             alt="random"
@@ -65,7 +70,7 @@
           />
         </div>
       </div>
-      <h4>Why do we use it?</h4>
+      <h3>Why do we use it?</h3>
       <div>
         Implementing intersection detection in the past involved event handlers
         and loops calling methods like
@@ -75,7 +80,13 @@
         performance problems. When a site is loaded with these tests, things can
         get downright ugly.
       </div>
-      <h5>More Info</h5>
+      <h3>Browser compatibility</h3>
+      <img
+        src="src/img/compatibility-intersection-observer-api.png"
+        alt="Intersection Observer API - Browser compatibility"
+        title="Intersection Observer API - Browser compatibility"
+      />
+      <h3>More Info</h3>
       <div>
         <ul>
           <li>

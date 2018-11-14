@@ -1,8 +1,6 @@
 <html>
   <head>
-    <title>
-      Web Share API
-    </title>
+    <title>The Web Share API</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
@@ -14,24 +12,66 @@
 
   <body>
     <div class="container">
-      <p>
-        <h1>
-          What is Lorem Ipsum?
-        </h1>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-        a
-        type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-        of
-        Lorem Ipsum.
-        <br />
-        <img src="https://picsum.photos/200/300/?random" alt="random" width="200" height="300" />
-        <a href="#" id="shareThisText">Share</a>
-      </p>
+      <a href="./index.html" id="backToHome" class="btn">Back to Home</a>
+      <h1>The Web Share API</h1>
+      <div>
+        The
+        <pre>Navigator.share()</pre>
+        method invokes the native sharing mechanism of the device as part of the
+        Web Share API. If the Web Share API is unsupported, then this method
+        will be undefined.
+      </div>
+      <h2>Couple of points before sharing!</h2>
+      <ul>
+        <li>URL must be <em>https</em></li>
+        <li>Browser support exists only in mobile devices as of now!</li>
+      </ul>
+      <h3>Example</h3>
+      <form>
+        <div class="image-holder">
+          <img
+            src="https://picsum.photos/200/300/?random"
+            alt="random"
+            width="200"
+            height="300"
+          />
+        </div>
+        <div class="input-group">
+          <textarea rows="5" id="customTextArea">Some text to share</textarea>
+        </div>
+        <div class="input-group">
+          <a href="#" id="shareThisText" class="btn in-page-btn">Share</a>
+        </div>
+      </form>
+      <h3>Browser compatibility</h3>
+      <img
+        src="src/img/compatibility-web-share-api.png"
+        alt="Web Share API - Browser compatibility"
+        title="Web Share API - Browser compatibility"
+      />
+      <h3>More Info</h3>
+      <div>
+        <ul>
+          <li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share"
+              target="_blank"
+              rel="noreferrer noopener"
+              >MDN web docs</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://developers.google.com/web/updates/2016/09/navigator-share"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Google Developers API
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </body>
   <script src="src/js/web-share-api.js" type="text/javascript"></script>
-
 </html>

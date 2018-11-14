@@ -29,6 +29,13 @@ pre {
   border-radius: 2px;
   border: 1px #bbbbbb solid;
   padding: 0.05rem 0.2rem;
+  white-space: pre-wrap; /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+img {
+  max-width: 100%;
+  height: auto;
 }
 ul li,
 ol li {
@@ -47,7 +54,32 @@ li.text-content {
 .container > div {
   display: block;
   clear: both;
-  /* margin-top: 1rem; */
+}
+.container div.image-holder {
+  width: auto;
+  overflow: hidden;
+  height: auto;
+  margin: 1rem;
+}
+.btn {
+  display: inline-block;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  outline: none;
+}
+.btn:hover {
+  text-decoration: none;
+}
+.in-page-btn,
+.in-page-btn:hover {
+  background: #78f5b0;
+  color: #000;
+}
+#backToHome {
+  float: right;
+  background: #788df5;
+  color: #fff;
 }
 
 /* Observer & Network information pages */
@@ -77,8 +109,27 @@ form {
 .input-group {
   margin: 0.5rem;
 }
-.input-group input {
+.input-group input,
+.input-group textarea {
   width: 100%;
+}
+
+/* Device Memory */
+#memoryInfoContainer {
+  padding: 1rem;
+  margin: 1rem 0;
+}
+.alert-danger {
+  color: #ff0000;
+  background: #ffe0e0;
+}
+.alert-warning {
+  color: #ff9d00;
+  background: #fff5e5;
+}
+.alert-success {
+  color: #00690a;
+  background: #d7ffde;
 }
 
 @media (min-width: 768px) {

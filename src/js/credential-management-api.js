@@ -77,7 +77,7 @@ document.querySelector('#loginForm').addEventListener('submit', function(e) {
       console.log('Your credential is being stored/updated')
     })
   } else {
-    console.log('Credentials not supported, proceeding with normal login')
+    alert('Credentials not supported, proceeding with normal login')
   }
 })
 

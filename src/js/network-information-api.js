@@ -1,6 +1,7 @@
 const connection =
   navigator.connection || navigator.mozConnection || navigator.webkitConnection
 let conType
+console.log(connection)
 if (typeof connection !== 'undefined') {
   conType = connection.type || connection.effectiveType
   function connectionUpdated() {

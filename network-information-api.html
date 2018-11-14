@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Network Information API</title>
+    <title>The Network Information API</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
@@ -12,46 +12,58 @@
 
   <body>
     <div class="container">
-      <h1>What is Lorem Ipsum?</h1>
-      <p class="regular">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries, but also the leap into electronic typesetting, remaining
-        essentially unchanged. It was popularised in the 1960s with the release
-        of Letraset sheets containing Lorem Ipsum passages, and more recently
-        with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum.
-      </p>
+      <a href="./index.html" id="backToHome" class="btn">Back to Home</a>
+      <h1>The Network Information API</h1>
+      <div>
+        The Network Information API provides information about the system's
+        connection in terms of general connection type (e.g.,
+        &lsquo;wifi&rsquo;, &lsquo;cellular&rsquo;, etc.). This can be used to
+        select high definition content or low definition content based on the
+        user's connection. The entire API consists of the addition of the
+        NetworkInformation interface and a single property to the Navigator
+        interface: Navigator.connection.
+      </div>
+      <div>
+        <pre><b>Note:</b> This feature is available in Web Workers.</pre>
+      </div>
+
       <div class="observer">
-        <h2>Where does it come from?</h2>
-        <p>
-          Contrary to popular belief, Lorem Ipsum is not simply random text. It
-          has roots in a piece of classical Latin literature from 45 BC, making
-          it over 2000 years old. Richard McClintock, a Latin professor at
-          Hampden-Sydney College in Virginia, looked up one of the more obscure
-          Latin words, consectetur, from a Lorem Ipsum passage, and going
-          through the cites of the word in classical literature, discovered the
-          undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
-          1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
-          Evil) by Cicero, written in 45 BC. This book is a treatise on the
-          theory of ethics, very popular during the Renaissance. The first line
-          of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
-          section 1.10.32.
+        <h2>Example</h2>
+        <div>
+          <ul>
+            <li>Below given images shows blury on low speed networks.</li>
+            <li>
+              It also uses
+              <a
+                href="intersection-observer-api.html"
+                title="Intersection Observer API"
+              >
+                Intersection Observer API
+              </a>
+              features.
+            </li>
+            <li>
+              Use <em>Network</em> tab in Chrome developer tools to change the
+              network throttling.
+            </li>
+          </ul>
+        </div>
+        <div class="image-holder">
           <img
             data-src="https://picsum.photos/200/300/?image=345"
             alt="random"
             width="200"
             height="300"
           />
+        </div>
+        <div class="image-holder">
           <img
             data-src="https://picsum.photos/200/300/?random"
             alt="random"
             width="200"
             height="300"
           />
-        </p>
+        </div>
       </div>
       <div class="regular">
         <h2>Why do we use it?</h2>
@@ -66,6 +78,34 @@
           infancy. Various versions have evolved over the years, sometimes by
           accident, sometimes on purpose (injected humour and the like).
         </p>
+      </div>
+      <h3>Browser compatibility</h3>
+      <img
+        src="src/img/compatibility-network-information-api.png"
+        alt="Network Information API - Browser compatibility"
+        title="Network Information API - Browser compatibility"
+      />
+      <h3>More Info</h3>
+      <div>
+        <ul>
+          <li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/API/Network_Information_API"
+              target="_blank"
+              rel="noreferrer noopener"
+              >MDN web docs</a
+            >
+          </li>
+          <li>
+            <a
+              href="http://wicg.github.io/netinfo/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              W3C Community Group Draft Report
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </body>

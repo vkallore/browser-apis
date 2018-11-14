@@ -1,12 +1,10 @@
 document.querySelector('#shareThisText').addEventListener('click', function(e) {
   e.preventDefault()
-  console.log(location.protocol)
   if ('share' in navigator) {
-    console.log(navigator)
     navigator
       .share({
         title: 'Sample Web Share',
-        text: 'Text to share on webshare api',
+        text: document.querySelector('#customTextArea').value,
         url: location.href
       })
       .then(function() {
