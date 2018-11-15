@@ -1,36 +1,108 @@
 <html>
+  <head>
+    <title>The Payment Request API</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="src/css/style.css"
+    />
+  </head>
 
-<head>
-  <title>
-    Payment Request API
-  </title>
-  <style>
-    .container {
-      max-width: 700px;
-      margin: 0 auto;
-    }
-  </style>
-</head>
+  <body>
+    <div class="container">
+      <a href="./index.html" id="backToHome" class="btn">Back to Home</a>
+      <h1>The Payment Request API</h1>
+      <div>
+        Many problems related to online shopping-cart abandonment can be traced
+        to checkout forms, which can be difficult and time consuming to fill out
+        and often require multiple steps to complete. The Payment Request API is
+        meant to reduce the number of steps needed to complete a payment online,
+        potentially doing away with checkout forms. It aims to make the checkout
+        process easier, by remembering a user's details, which are then passed
+        along to a merchant hopefully without requiring a HTML form.
+      </div>
+      <ul>
+        <li>
+          <b>Fast purchase experience:</b> Users enter their details once into
+          the browser and are then ready to pay for goods and services on the
+          web. They no longer have to fill out the same details repeatedly
+          across different sites.
+        </li>
+        <li>
+          <b>Consistent experience on every site (that supports the API):</b> As
+          the payment sheet is controlled by the browser, it can tailor the
+          experience to the user. This can include localizing the UI into the
+          user's preferred language.
+        </li>
+        <li>
+          <b>Accessibility:</b> As the browser controls the input elements of
+          the payment sheet, it can assure consistent keyboard and screen reader
+          accessibility on every website without developers needing to do
+          anything. A browser could also adjust the font size or color contrast
+          of the payment sheet, making it more comfortable for the user to make
+          a payment.
+        </li>
+        <li>
+          <b>Credentials management:</b> Users can manage their credit cards and
+          shipping addresses directly in the browser. A browser can also sync
+          these &ldquo;credentials&rdquo; across devices, making it easy for
+          users to jump from desktop to mobile and back again when buying
+          things.
+        </li>
+        <li>
+          <b>Consistent error handling:</b> The browser can check the validity
+          of card numbers, and can tell the user if a card has expired (or is
+          about to expire). The browser can automatically suggest which card to
+          use based on past usage patterns or restrictions from the merchant
+          (e.g, &ldquo;we only accept Visa or Mastercard&rdquo;), or allow the
+          user to say which is their default/favorite card.
+        </li>
+      </ul>
+      <div>
+        To request a payment, a web page creates a
+        <pre>PaymentRequest</pre>
+        object in response to a user action that initiates a payment, such as
+        clicking a &ldquo;Purchase&rdquo; button. The PaymentRequest allows the
+        web page to exchange information with the user agent while the user
+        provides input to complete the transaction.
+      </div>
+      <div class="note">
+        <b>Note:</b> The API is available inside cross-origin
+        <code>&lt;iframe&gt;</code> elements only if they have had the
+        allowpaymentrequest attribute set on them.
+      </div>
 
-<body>
-  <div class="container">
-    <p>
-      <h1>
-        What is Lorem Ipsum?
-      </h1>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-      standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-      a
-      type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-      remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-      Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-      of
-      Lorem Ipsum.
-      <br />
-      <img src="https://picsum.photos/200/300/?random" alt="random" width="200" height="300" />
-    </p>
-  </div>
-</body>
-<script src="src/js/payment-request-api.js" type="text/javascript"></script>
-
+      <h3>Browser compatibility</h3>
+      <img
+        src="src/img/compatibility-payment-request-api.png"
+        alt="Payment Request API - Browser compatibility"
+        title="Payment Request API - Browser compatibility"
+      />
+      <h3>More Info</h3>
+      <div>
+        <ul>
+          <li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API"
+              target="_blank"
+              rel="noreferrer noopener"
+              >MDN web docs</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://developers.google.com/web/fundamentals/payments/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Google Developers API
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+  <script src="src/js/payment-request-api.js" type="text/javascript"></script>
 </html>

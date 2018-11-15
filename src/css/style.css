@@ -21,17 +21,27 @@ a:hover {
   color: #004499;
   text-decoration: underline;
 }
-pre {
+pre,
+div.note {
   display: inline;
   font-style: italic;
   background: #dedee0;
   color: #0071ff;
   border-radius: 2px;
   border: 1px #bbbbbb solid;
-  padding: 0.05rem 0.2rem;
-  white-space: pre-wrap; /* Since CSS 2.1 */
-  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+}
+code {
+  background: #9292f1;
+  color: #fff;
+}
+pre,
+code {
+  padding: 0.05rem 0.5rem;
+  white-space: normal;
   word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+div.note {
+  padding: 0.5rem;
 }
 img {
   max-width: 100%;
