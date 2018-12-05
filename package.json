@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Browser APIs - trying out",
   "scripts": {
-    "start": "http-server"
+    "start": "http-server",
+    "local-ssl": "openssl req -newkey rsa:2048 -new -nodes -x509 -days 3650 -keyout key.pem -out cert.pem",
+    "start-ssl": "http-server -S -C cert.pem -o"
   },
   "repository": {
     "type": "git",
